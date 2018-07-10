@@ -15,45 +15,17 @@
                 <input id="password" type="password">
                 <input id="register" onclick="register()" type="button" value="REGISTER">
                 <input id="login" onclick="login()" type="button" value="LOGIN">
-                <input id="loginFacebook" onclick="loginFacebook()" type="button" value="LOGIN FACEBOOK">
+                <input id="loginFacebook" type="button" onclick="loginFacebook()" value="LOGIN FACEBOOK">
             </div>
         </div>
+        <div>
+            <div id="messageContainer" ></div>
+            <input id="messageArea" type="text">
+            <input id="sendButton" type="button" value="SEND" onclick="sendMessage()" > 
+        </div>
         <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-        <script src<html>
-                <head>
-                    <meta charset="utf-8">
-                    <link rel="stylesheet" href="style.css">
-                </head>
-                <body>
-                    <h1>Chat laboratoria</h1>
-                    <div id="loginContainer">
-                        <div id="loggedIn">
-                            <p id="username"></p>
-                            <input id="logOutButton" onclick="logout()" type="button" value="LOG OUT">
-                        </div>
-                        <div id="loggedOut">
-                            <input id="email" type="email">
-                            <input id="password" type="password">
-                            <input id="register" onclick="register()" type="button" value="REGISTER">
-                            <input id="login" onclick="login()" type="button" value="LOGIN">
-                            <input id="loginFacebook" type="button" onclick="loginFacebook()" value="LOGIN FACEBOOK">
-                        </div>
-                    </div>
-                    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-                    <script>
-                        // Initialize Firebase
-                        var config = {
-                        apiKey: "AIzaSyBg_D1iHri4CZVdNmlJbEEGtWlLRo4m4Pk",
-                        authDomain: "chatlaboratoria-ca2ae.firebaseapp.com",
-                        databaseURL: "https://chatlaboratoria-ca2ae.firebaseio.com",
-                        projectId: "chatlaboratoria-ca2ae",
-                        storageBucket: "chatlaboratoria-ca2ae.appspot.com",
-                        messagingSenderId: "352695800290"
-                        };
-                        firebase.initializeApp(config);
-                    </script>
-                    <script src="app.js"></script>
-                </body>
-            </html>="app.js"></script>
+        <script src="app.js"></script>
+        <script src="chat.js"></script>
+        <script src="inicialize.js"></script>
     </body>
 </html>

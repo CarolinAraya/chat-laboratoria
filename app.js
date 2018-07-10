@@ -12,26 +12,25 @@ window.onload = () => {
         }
     });
 
-    firebase.database().ref('message').once('value')
-        .once('value')
-        .then(()=>{
-            console.log("mensajes >" +JASON.stringify(messages));
-        })
-        .catch(()=>{
-            
-        });
-
-//Acá comenzamos a escuchar por nuevos mensajes usando el evento on child_added
     firebase.database().ref('messages')
-    .on('child_added',(newMessage)=>{
-        messageContainer.innerHTML += `
-        <p>Nombre : ${newMessage.val().creatorNAme}</p>
-        <p>${newMessage.val().text}</p>
-        `;
-    });
+        .limitToLast(2)//Filtro paran no obtener todos los mensajes
+        .once('value')
+        .then((messages) => {
+            console.log("Mensajes > "+JSON.stringify(messages));
+        })
+        .catch(() => {
+
+        })
+
+    // Acá comenzamos a escuchar por nuevos mensajes usando el evento
+    // on child_added
+    firebase.database().ref('messages')
+        .on('child_added', (newMessage) => {
+            messageContainer.innerHTML +=
+                `<p>Nombre : ${newMessage.val().creatorName}</p>
+      <p>${newMessage.val().text}</p>`;
+        });
 };
-
-
 
 function register() {
     const emailValue = email.value;

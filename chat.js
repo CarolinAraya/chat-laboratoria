@@ -12,3 +12,4 @@ function sendMessage() {//pensar qué debe ocurrir para enviar un mensaje, desde
         text : messageAreaText,
     }); //ref, ruta para guardar los mensajes
 }
+

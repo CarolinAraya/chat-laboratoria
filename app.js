@@ -5,6 +5,16 @@ window.onload = () => {
             loggedOut.style.display = "none";
             loggedIn.style.display = "block";
             console.log("User > " + JSON.stringify(user));
+
+            // Acá comenzamos a escuchar por nuevos mensajes usando el evento
+            // on child_added
+            firebase.database().ref('messages')
+                .limitToLast(2)
+                .on('child_added', (newMessage) => {
+                    messageContainer.innerHTML +=
+                        `<p>Nombre : ${newMessage.val().creatorName}</p>
+                         <p>${newMessage.val().text}</p>`;
+            });
         } else {
             //No estamos logueados
             loggedOut.style.display = "block";
@@ -14,28 +24,7 @@ window.onload = () => {
         }
     });
 
-    firebase.database().ref('messages')
-        .limitToLast(2)//Filtro paran no obtener todos los mensajes
-        .once('value', (snap) => {
-            messageContainer.innerHTML +=
-            `<p>Nombre : ${snap.val().creatorName}</p>
-             <p>${snap.val().text}</p>`;
-        })
-        .then((messages) => {
-            console.log("Mensajes > "+JSON.stringify(messages));
-        })
-        .catch(() => {
 
-        })
-
-    // Acá comenzamos a escuchar por nuevos mensajes usando el evento
-    // on child_added
-    firebase.database().ref('messages')
-        .on('child_added', (newMessage) => {
-            messageContainer.innerHTML +=
-                `<p>Nombre : ${newMessage.val().creatorName}</p>
-                 <p>${newMessage.val().text}</p>`;
-        });
 };
 
 function register() {

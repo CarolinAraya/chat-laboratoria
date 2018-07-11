@@ -9,12 +9,18 @@ window.onload = () => {
             //No estamos logueados
             loggedOut.style.display = "block";
             loggedIn.style.display = "none";
+
+            messageContainer.innerHTML = "";
         }
     });
 
     firebase.database().ref('messages')
         .limitToLast(2)//Filtro paran no obtener todos los mensajes
-        .once('value')
+        .once('value', (snap) => {
+            messageContainer.innerHTML +=
+            `<p>Nombre : ${snap.val().creatorName}</p>
+             <p>${snap.val().text}</p>`;
+        })
         .then((messages) => {
             console.log("Mensajes > "+JSON.stringify(messages));
         })
@@ -28,7 +34,7 @@ window.onload = () => {
         .on('child_added', (newMessage) => {
             messageContainer.innerHTML +=
                 `<p>Nombre : ${newMessage.val().creatorName}</p>
-      <p>${newMessage.val().text}</p>`;
+                 <p>${newMessage.val().text}</p>`;
         });
 };
 

@@ -1,3 +1,3 @@
-function createPerfil(params) {
+function createPerfil() {
     
 }

@@ -1,4 +1,8 @@
 
+function inicializeChat() {
+    
+}
+
 function sendMessage() {//pensar qué debe ocurrir para enviar un mensaje, desde el usuario
     const currentUser = firebase.auth().currentUser;
     const messageAreaText = messageArea.value;

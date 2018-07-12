@@ -1,39 +1,53 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Chat laboratoria</h1>
-        <!-- Login - logout -->
-        <div id="loginContainer">
-            <div id="loggedIn">
-                <p id="username"></p>
-                <input id="logOutButton" onclick="logout()" type="button" value="LOG OUT">
-            </div>
-            <div id="loggedOut">
-                <input id="email" type="email">
-                <input id="password" type="password">
-                <input id="register" onclick="register()" type="button" value="REGISTER">
-                <input id="login" onclick="login()" type="button" value="LOGIN">
-                <input id="loginFacebook" type="button" onclick="loginFacebook()" value="LOGIN FACEBOOK">
-            </div>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Chat laboratoria</h1>
+    <!-- Login - logout -->
+    <div id="loginContainer">
+        <div id="loggedIn">
+            <p id="username"></p>
+            <input id="logOutButton" onclick="logout()" type="button" value="LOG OUT">
         </div>
-        <!-- Perfil User -->
-        <div id="userPerfil" >
-            <h1>Mi Perfil</h1>
-            <input type="button" onclick="changePerfil()">
+        <div id="loggedOut">
+            <input id="email" type="email">
+            <input id="password" type="password">
+            <input id="register" onclick="register()" type="button" value="REGISTER">
+            <input id="login" onclick="login()" type="button" value="LOGIN">
+            <input id="loginFacebook" type="button" onclick="loginFacebook()" value="LOGIN FACEBOOK">
         </div>
-        <!-- chat area -->
+    </div>
+    <!-- Perfil User -->
+    <div id="userPerfil" class="none-element">
+        <h1>Mi Perfil</h1>
+        <!-- Photo -->
         <div>
-            <div id="messageContainer" ></div>
-            <input id="messageArea" type="text">
-            <input id="sendButton" type="button" value="SEND" onclick="sendMessage()" > 
+            <section id="photo">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/-PAXP-deijE.gif" alt="foto de perfil">
+            </section>
         </div>
-        
-        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-        <script src="app.js"></script>
-        <script src="chat.js"></script>
-        <script src="inicialize.js"></script>
-    </body>
+        <div>
+            <input type="button" onclick="changePerfil()" value="MODIFICAR">
+        </div>
+    </div>
+    <!-- chat area -->
+    <div>
+        <input type="button" value="CHAT" class="none-element" onclick="inicializeChat()">
+    </div>
+    <div>
+        <div id="messageContainer"></div>
+        <input id="messageArea" type="text">
+        <input id="sendButton" type="button" value="SEND" onclick="sendMessage()">
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="app.js"></script>
+    <script src="chat.js"></script>
+    <script src="inicialize.js"></script>
+</body>
+
 </html>

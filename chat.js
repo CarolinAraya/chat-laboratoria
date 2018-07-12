@@ -1,6 +1,6 @@
 
 function inicializeChat() {
-    
+    sendMessageDiv.style.display = "block";
 }
 
 function sendMessage() {//pensar qué debe ocurrir para enviar un mensaje, desde el usuario

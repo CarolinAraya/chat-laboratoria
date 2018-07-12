@@ -5,7 +5,7 @@ window.onload = () => {
             loggedOut.style.display = "none";
             loggedIn.style.display = "block";
             userPerfil.style.display = "block";
-            
+            chatButtonInicialize.style.display = "block"
             console.log("User > " + JSON.stringify(user));
 
             // Acá comenzamos a escuchar por nuevos mensajes usando el evento
@@ -21,6 +21,7 @@ window.onload = () => {
             //No estamos logueados
             loggedOut.style.display = "block";
             loggedIn.style.display = "none";
+            userPerfil.style.display = "none";
             messageContainer.innerHTML = "";
         }
     });

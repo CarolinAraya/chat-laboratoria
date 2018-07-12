@@ -33,20 +33,23 @@
         <div>
             <input type="button" onclick="changePerfil()" value="MODIFICAR">
         </div>
+        <!-- chat area -->
+        <div>
+            <input id="chatButtonInicialize" type="button" value="CHAT" onclick="inicializeChat()">
+        </div>
+        <!-- send message -->
+        <div id="sendMessageDiv" class="none-element">
+            <div id="messageContainer"></div>
+            <input id="messageArea" type="text">
+            <input id="sendButton" type="button" value="SEND" onclick="sendMessage()">
+        </div>
     </div>
-    <!-- chat area -->
-    <div>
-        <input type="button" value="CHAT" class="none-element" onclick="inicializeChat()">
-    </div>
-    <div>
-        <div id="messageContainer"></div>
-        <input id="messageArea" type="text">
-        <input id="sendButton" type="button" value="SEND" onclick="sendMessage()">
-    </div>
+
 
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="app.js"></script>
     <script src="chat.js"></script>
+    <script src="perfil.js"></script>
     <script src="inicialize.js"></script>
 </body>
 

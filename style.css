@@ -1,3 +1,7 @@
 #messageContainer{
     height: 70vh;
 }
+
+#userPerfil{
+    display: none;
+}

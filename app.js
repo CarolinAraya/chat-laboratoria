@@ -4,6 +4,7 @@ window.onload = () => {
             //Si estamos logueados
             loggedOut.style.display = "none";
             loggedIn.style.display = "block";
+            userPerfil.style.display = "block";
             
             console.log("User > " + JSON.stringify(user));
 

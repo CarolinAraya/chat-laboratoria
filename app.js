@@ -27,9 +27,15 @@ window.onload = () => {
     });
 };
 
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+  
+
 function register() {
-    const emailValue = email.value;
-    const passwordValue = password.value;
+    registerDiv.style.display = 'block';
+    const emailValue = registerEmail.value;
+    const passwordValue = registerPassword.value;
     firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
         .then(() => {
             console.log("Usuario registrado");

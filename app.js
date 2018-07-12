@@ -19,12 +19,9 @@ window.onload = () => {
             //No estamos logueados
             loggedOut.style.display = "block";
             loggedIn.style.display = "none";
-
             messageContainer.innerHTML = "";
         }
     });
-
-
 };
 
 function register() {
@@ -75,4 +72,6 @@ function loginFacebook() {
             console.log("Error de firebase > " + error.code);
             console.log("Error de firebase, mensaje > " + error.message);
         });
+        scope: 'email'//acceder al email del usuario
+
 }

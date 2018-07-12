@@ -10,6 +10,7 @@ function sendMessage() {//pensar qué debe ocurrir para enviar un mensaje, desde
         creator : currentUser.uid,
         creatorName : currentUser.displayName,
         text : messageAreaText,
+        //profile_picture: imgurl
     }); //ref, ruta para guardar los mensajes
 }
 

@@ -1,11 +1,8 @@
-#messageContainer{
-    height: 70vh;
+.login-page {
+    margin-top: 50px;
 }
 
-#userPerfil{
-    display: none;
-}
-
-.none-element{
+.register-page {
+    margin-top: 50px;
     display: none;
 }

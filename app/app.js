@@ -16,7 +16,7 @@ window.onload = () => {
                     messageContainer.innerHTML +=
                         `<p>Nombre : ${newMessage.val().creatorName}</p>
                          <p>${newMessage.val().text}</p>`;
-            });
+                });
         } else {
             //No estamos logueados
             loggedOut.style.display = "block";
@@ -26,11 +26,6 @@ window.onload = () => {
         }
     });
 };
-
-$(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
-  
 
 function register() {
     registerDiv.style.display = 'block';
@@ -81,6 +76,6 @@ function loginFacebook() {
             console.log("Error de firebase > " + error.code);
             console.log("Error de firebase, mensaje > " + error.message);
         });
-        scope: 'email'//acceder al email del usuario
+    scope: 'email'//acceder al email del usuario
 
 }

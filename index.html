@@ -83,46 +83,23 @@
 
                         <div class="form-group">
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="email" placeholder="correo electrónico">
+                                <input id="register-email" type="text" class="form-control" name="email" placeholder="correo electrónico">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="firstname" placeholder="nombre">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" name="lastname" placeholder="apellidos">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-9">
-                                <input type="password" class="form-control" name="passwd" placeholder="contraseña">
+                                <input id="register-password" type="password" class="form-control" name="passwd" placeholder="contraseña">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <!-- Button -->
                             <div class="col-md-offset-3 col-md-9">
-                                <button id="btn-signup" type="button" class="btn btn-info">
+                                <button id="btn-signup" type="button" class="btn btn-info" onclick="register()">
                                     <i class="icon-hand-right"></i> &nbsp Registrarme</button>
-                                <span style="margin-left:8px;">o</span>
                             </div>
                         </div>
-
-                        <div style="border-top: 1px solid #999; padding-top:20px" class="form-group">
-
-                            <div class="col-md-offset-3 col-md-9">
-                                <button id="btn-fbsignup" type="button" class="btn btn-primary">
-                                    <i class="icon-facebook"></i>   Registrarme con Facebook</button>
-                            </div>
-
-                        </div>
-
-
 
                     </form>
                 </div>
@@ -178,70 +155,10 @@
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="app/firebase/inicialize.js"></script>
     <script src="app/login/login.js"></script>
+    <script src="app/register/register.js"></script>    
     <script src="app/dashboard/dashboard.js"></script>
     <script src="app/app.js"></script>
 
-
-
-
-
-
-
-
-    <!-- <div id="loginContainer">
-        <div id="loggedIn">
-            <p id="username"></p>
-            <input id="logOutButton" onclick="logout()" type="button" value="LOG OUT">
-        </div>
-        <div id="loggedOut">
-            <input id="email" type="email">
-            <input id="password" type="password">
-            <input id="register" onclick="register()" type="button" value="SING IN">
-            <input id="login" onclick="login()" type="button" value="LOGIN">
-            <input id="loginFacebook" type="button" onclick="loginFacebook()" value="LOGIN FACEBOOK">
-        </div>
-    </div>
-    <!-- Register area --
-    <div id="registerDiv" class="none-element">
-        <input id="registerName" type="text" placeholder="nombre...">
-        <input id="registerEmail" type="email" placeholder="email...">
-        <input id="registerPassword" type="password" placeholder="password...">
-        <input id="confirmPassword" type="password" placeholder="confirma tu clave">
-        <input type="button" value="SING IN">
-    </div>
-    <!-- Perfil User --
-    <div id="userPerfil" class="none-element">
-        <h1>Mi Perfil</h1>
-        <!-- Photo --
-        <div>
-            <section id="photo">
-                <div>
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/-PAXP-deijE.gif" alt="foto de perfil">
-                </div>
-
-            </section>
-        </div>
-        <div>
-            <input type="button" onclick="changePerfil()" value="MODIFICAR">
-        </div>
-        <!-- chat area --
-        <div>
-            <input id="chatButtonInicialize" type="button" value="CHAT" onclick="inicializeChat()">
-        </div>
-        <!-- send message --
-        <div id="sendMessageDiv" class="none-element">
-            <div id="messageContainer"></div>
-            <input id="messageArea" type="text">
-            <input id="sendButton" type="button" value="SEND" onclick="sendMessage()">
-        </div>
-    </div>
-
-
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <script src="app.js"></script>
-    <script src="chat.js"></script>
-    <script src="perfil.js"></script>
-    <script src="inicialize.js"></script> -->
 </body>
 
 </html>

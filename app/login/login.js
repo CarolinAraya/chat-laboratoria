@@ -28,3 +28,11 @@ function loginWithFacebook() {
     scope: 'email'//acceder al email del usuario
 
 }
+
+function logout() {
+    firebase.auth().signOut()
+        .then(() => {
+            console.log("Chao");
+        })
+        .catch();
+}
